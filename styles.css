@@ -1,1 +1,13 @@
 /*  your css code here. If applicable */
+document.getElementById("removeButton").addEventListener("click", function() {
+    let colorDropdown = document.getElementById("colorSelect");
+    let selectedOption = colorDropdown.options[colorDropdown.selectedIndex];
+
+    if (selectedOption) {
+        selectedOption.remove(); // Removes the selected option
+    }
+});
+
+
+
+
