@@ -23,6 +23,17 @@
 
 
 		<script type="text/javascript" src="./script.js">
+			document.addEventListener("DOMContentLoaded", function () {
+    const removeButton = document.querySelector('input[type="button"][value="Select and Remove"]');
+
+    removeButton.addEventListener("click", function () {
+        const colorDropdown = document.getElementById("colorSelect");
+        if (colorDropdown.selectedIndex !== -1) {
+            colorDropdown.remove(colorDropdown.selectedIndex);
+        }
+    });
+});
+
 		</script>
 
 	</body>
