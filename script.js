@@ -1,8 +1,13 @@
-//your JS code here. If required.
-/*  your css code here. If applicable */
-function removeColor() {
-    let colorDropdown = document.getElementById("colorSelect");
-    if (colorDropdown.selectedIndex !== -1) {
-        colorDropdown.remove(colorDropdown.selectedIndex);
+document.addEventListener("DOMContentLoaded", function () {
+    const removeButton = document.querySelector('input[type="button"][value="Select and Remove"]');
+    removeButton.addEventListener("click", function () {
+        const colorDropdown = document.getElementById("colorSelect");
+        if (colorDropdown.selectedIndex !== -1) {
+            colorDropdown.remove(colorDropdown.selectedIndex);
+            colorDropdown.dispatchEvent(new Event('change')); // Ensures the UI updates properly
+        }
+    });
+});
+
     }
 }
